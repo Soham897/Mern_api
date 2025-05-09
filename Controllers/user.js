@@ -60,3 +60,17 @@ export const userProfile = async (req,res)=>{
     res.json({user:req.User})
    
 }
+
+export const userbyid = async (req,res)=>{
+    
+    const id = req.params.id;
+
+    let user = await usermodel.findById(id);
+
+    if(!user){
+        return res.json({message:"User not exist",success:false})
+    }
+
+    res.json({message:"User found",user,success:true})
+   
+}

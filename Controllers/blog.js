@@ -1,5 +1,5 @@
 
-import { blogmodel } from "../Models/blog.js";
+import { blogmodel } from "../Models/Blog.js";
 
 export const addBlog = async (req,res)=>{
     const {title,description,image} = req.body;

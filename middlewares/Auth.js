@@ -5,7 +5,7 @@ export const isauthenticate = async (req,res,next)=>{
     const {token} = req.cookies;
 
     if(!token){
-        return res.json({message:'Login or Register first',success:false})
+        return res.status(401).json({message:'Login or Register first',success:false})
     }
 
     const decoded = jwt.verify(token,process.env.JWT);

@@ -71,6 +71,6 @@ export const userbyid = async (req,res)=>{
         return res.status(404).json({message:"User not exist",success:false})
     }
 
-    res.status(200).json({message:"User found",user,success:true})
+    res.json({message:"User found",user,success:true})
    
 }
